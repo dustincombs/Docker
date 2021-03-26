@@ -22,7 +22,7 @@ RUN xvfb-run winetricks -q comdlg32ocx msflxgrd richtx32 vb5run comctl32ocx tabc
 RUN mkdir -p $SRIM_DIR && \
     cd $SRIM_DIR && \
     wget -q https://gitlab.com/costrouc/pysrim/raw/master/assets/srim.2013.zip && \
-    unzip srim.2013.zip && \
+    unzip srim.2013.zip -d $SRIM_DIR && \
     cd "$SRIM_DIR" && \
     echo "1" > $SRIM_DIR/TRIMAUTO
 
