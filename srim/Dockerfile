@@ -26,7 +26,6 @@ RUN mkdir -p $SRIM_DIR && \
     cd "$SRIM_DIR" && \
     echo "1" > $SRIM_DIR/TRIMAUTO
 
-COPY examples/input/TRIM.Ni.IN $SRIM_DIR/TRIM.IN
 
 WORKDIR "$SRIM_DIR"
 CMD ["xvfb-run", "-a", "wine", "TRIM.exe"]
